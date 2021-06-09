@@ -16,7 +16,7 @@ node {
     }
  
     stage('Push image') {
-       docker.withRegistry('https://hub.docker.com/repository/docker/saberdocker/juneapp', 'docker_id') {
+       docker.withRegistry('https://hub.docker.com/', 'jenkinshub') {
          app.push("${env.BUILD_NUMBER}")
          app.push("latest")
        }
