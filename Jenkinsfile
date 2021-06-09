@@ -16,7 +16,7 @@ node {
     }
  
     stage('Push image') {
-       docker.writeRegistry('https://hub.docker.com/repository/docker/saberdocker/juneapp', 'dockerhub_id') {
+       docker.writeRegistry('https://registry.hub.docker.com', 'docker_id') {
          app.push("${env.BUILD_NUMBER}")
          app.push("latest")
        }
