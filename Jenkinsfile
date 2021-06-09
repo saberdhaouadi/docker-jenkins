@@ -16,7 +16,7 @@ node {
     }
  
     stage('Push image') {
-       docker.writeRegistry('https://registry.hub.docker.com', 'docker_id') {
+       docker.writeRegistry('', registryCredential) {
          app.push("${env.BUILD_NUMBER}")
          app.push("latest")
        }
