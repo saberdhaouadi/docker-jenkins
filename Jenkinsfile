@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("https://github.com/saberdhaouadi/docker-jenkins.git")
+        app = docker.build("devopnode")
     }
 
     stage('Test image') {
