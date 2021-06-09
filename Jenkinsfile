@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("devopnode")
+        app = docker.build("saberdocker/juneapp:latest")
     }
 
     stage('Test image') {
